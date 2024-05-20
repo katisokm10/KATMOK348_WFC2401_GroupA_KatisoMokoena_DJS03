@@ -1,11 +1,20 @@
+/**
+ * Module containing functions and event listeners for a book search application.
+ * @module BookSearchApp
+ */
 
-
+// Import necessary data and constants from external modules
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js';
 
+// Initialize page number and search result matches
 let page = 1;
 let matches = books;
 
-// Function to create a book preview element
+/**
+ * Creates a preview element for a book.
+ * @param {Object} book - The book object containing details like id, image, title, and author.
+ * @returns {HTMLElement} A button element representing the book preview.
+ */
 function createBookPreviewElement({ id, image, title, author }) {
     const element = document.createElement('button');
     element.classList = 'preview';
